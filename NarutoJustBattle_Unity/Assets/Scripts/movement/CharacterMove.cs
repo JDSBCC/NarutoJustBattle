@@ -4,7 +4,6 @@ using System.Collections;
 public class CharacterMove : MonoBehaviour {
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
 	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
-	[SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
 	
 	public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -30,7 +29,7 @@ public class CharacterMove : MonoBehaviour {
 		m_Anim.SetBool("ground", m_Grounded);
 		
 		// Set the vertical animation
-		m_Anim.SetFloat("speed", m_Rigidbody2D.velocity.y);
+		//m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
 	
 	
@@ -38,13 +37,11 @@ public class CharacterMove : MonoBehaviour {
 	{
 		
 		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+		if (m_Grounded)
 		{
-			// Reduce the speed if crouching by the crouchSpeed multiplier
-			//move = (move);
 			
 			// The Speed animator parameter is set to the absolute value of the horizontal input.
-			m_Anim.SetFloat("speed", Mathf.Abs(move));
+			m_Anim.SetFloat("hSpeed", Mathf.Abs(move));
 			
 			// Move the character
 			m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
