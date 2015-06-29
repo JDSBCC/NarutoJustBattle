@@ -4,9 +4,7 @@ using System.Collections;
 public class CharacterMove : MonoBehaviour {
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
 	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
-	[SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
-	
-	public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
+
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	public Animator m_Anim;            // Reference to the player's animator component.
@@ -16,33 +14,47 @@ public class CharacterMove : MonoBehaviour {
 	private void Awake()
 	{
 		// Setting up references.
-		m_GroundCheck = GameObject.FindGameObjectWithTag("Ground").GetComponent<Transform>();
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 	
 	
-	private void FixedUpdate()
+	/*private void FixedUpdate()
 	{
 		
 		m_Grounded = false;
-		
-		Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
-		Vector2 groundPos = new Vector2(m_GroundCheck.position.x, m_GroundCheck.position.y);
-		
-		m_Grounded = Physics2D.Linecast(playerPos, groundPos, 1 << m_WhatIsGround);
+		if(transform.position.y==-4){
+			m_Grounded=true;
+		}
 
 		Debug.Log (m_Grounded);
 		m_Anim.SetBool("ground", m_Grounded);
 		
 		// Set the vertical animation
 		//m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+	}*/
+
+	void OnCollisionEnter2D(Collision2D coll){
+		if(coll.transform.name=="Ground"){
+			m_Grounded=true;
+			m_Anim.SetBool("ground", m_Grounded);
+		}
+	}
+	
+	void OnCollisionExit2D(Collision2D coll){
+		if(coll.transform.name=="Ground"){
+			m_Grounded=false;
+			m_Anim.SetBool("ground", m_Grounded);
+		}
 	}
 	
 	
 	public void Move(float move, bool jump)
 	{
-		
+		//change colliders
+		Destroy(GetComponent<PolygonCollider2D>());
+		gameObject.AddComponent<PolygonCollider2D>();
+
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded)
 		{
