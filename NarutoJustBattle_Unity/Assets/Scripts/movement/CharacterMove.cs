@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterMove : MonoBehaviour {
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
 	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
+	[SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 	
 	public Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -15,6 +16,7 @@ public class CharacterMove : MonoBehaviour {
 	private void Awake()
 	{
 		// Setting up references.
+		m_GroundCheck = GameObject.FindGameObjectWithTag("Ground").GetComponent<Transform>();
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
@@ -23,9 +25,14 @@ public class CharacterMove : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		
-		//check if we are on the ground
-		m_Grounded = Physics2D.Linecast(transform.position, m_GroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		m_Grounded = false;
 		
+		Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
+		Vector2 groundPos = new Vector2(m_GroundCheck.position.x, m_GroundCheck.position.y);
+		
+		m_Grounded = Physics2D.Linecast(playerPos, groundPos, 1 << m_WhatIsGround);
+
+		Debug.Log (m_Grounded);
 		m_Anim.SetBool("ground", m_Grounded);
 		
 		// Set the vertical animation
