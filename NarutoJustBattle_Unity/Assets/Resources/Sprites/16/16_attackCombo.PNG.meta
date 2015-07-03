@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: f5c5312aee663e148b0a3a69a051d2fc
+timeCreated: 1435948736
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 16_attackCombo_0
+    21300002: 16_attackCombo_1
+    21300004: 16_attackCombo_2
+    21300006: 16_attackCombo_3
+    21300008: 16_attackCombo_4
+    21300010: 16_attackCombo_5
+    21300012: 16_attackCombo_6
+    21300014: 16_attackCombo_7
+    21300016: 16_attackCombo_8
+    21300018: 16_attackCombo_9
+    21300020: 16_attackCombo_10
+    21300022: 16_attackCombo_11
+    21300024: 16_attackCombo_12
+    21300026: 16_attackCombo_13
+    21300028: 16_attackCombo_14
+    21300030: 16_attackCombo_15
+    21300032: 16_attackCombo_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 16_attackCombo_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 170
+        width: 53
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 170
+        width: 44
+        height: 76
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 170
+        width: 83
+        height: 77
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 170
+        width: 81
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_4
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 170
+        width: 36
+        height: 71
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 90
+        width: 37
+        height: 66
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 90
+        width: 75
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 90
+        width: 75
+        height: 67
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_8
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 90
+        width: 65
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_9
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 90
+        width: 34
+        height: 73
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 9
+        width: 35
+        height: 69
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_11
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 9
+        width: 43
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_12
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 9
+        width: 43
+        height: 69
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_13
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 9
+        width: 60
+        height: 67
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 9
+        width: 61
+        height: 68
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 9
+        width: 61
+        height: 57
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16_attackCombo_16
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 9
+        width: 39
+        height: 75
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
